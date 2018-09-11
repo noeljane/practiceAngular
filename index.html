@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Angular Practice</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
 <body>
     <h1>HI!</h1>
+    <div ng-app="">
+        <p>Name: <input type="text" ng-model="name"></p>
+        <p ng-bind="name"></p>
+    </div>
     
 </body>
 </html>
