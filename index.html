@@ -11,22 +11,27 @@
 
 <body>
     <h1>HI!</h1>
-    
-    
 
-    <div ng-app="">
-        <p>Name: <input type="text" ng-model="name" /></p>
-        <p>{{name}}</p>
-        <p>My first expression: {{5 +5}}</p>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>First Name: <input type="text" ng-model="firstName" /></p>
+        <p>Last Name: <input type="text" ng-model="lastName" /></p>
+        
+        <p>{{firstName + lastName}}</p>
+        
     </div>
-    <!--Modules define Angular S applications--->
-    <!--Controllers control AngularJS applications --->
-    <!--ng-app directives defines the application--->
-    <!--ng-controller directive defines the controller--->
-    <!--<script>
+    
+    <script>
         var app = angular.module('myApp', []);
-        console.log(app)
-        app.controller()
-    </script> -->
+        app.controller('myCtrl', function($scope){
+            $scope.firstName = "John";
+            $scope.lastName = "Doe";
+        });
+
+    </script>
 </body>
 </html>
+
+<!--Modules define Angular S applications--->
+<!--Controllers control AngularJS applications --->
+<!--ng-app directives defines the application--->
+<!--ng-controller directive defines the controller--->
