@@ -15,10 +15,18 @@
     
 
     <div ng-app="">
-        <p>My first expression: {{ 5 + 5 }}</p>
+        <p>Name: <input type="text" ng-model="name" /></p>
+        <p>{{name}}</p>
+        <p>My first expression: {{5 +5}}</p>
     </div>
-          
-    
-    
+    <!--Modules define Angular S applications--->
+    <!--Controllers control AngularJS applications --->
+    <!--ng-app directives defines the application--->
+    <!--ng-controller directive defines the controller--->
+    <!--<script>
+        var app = angular.module('myApp', []);
+        console.log(app)
+        app.controller()
+    </script> -->
 </body>
 </html>
