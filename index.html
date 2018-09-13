@@ -11,16 +11,14 @@
 
 <body>
     
-        <div ng-app="myApp" ng-controller="myCtrl">
-            {{ firstName + " " + lastName }}
+        <div ng-app="" ng-init="firstName='John'">
+            <p>Name: <input type="text" ng-model="firstName"></p>
+            <p>You wrote: {{firstName}}
+
+            </p>
         </div>
 
-    <script src="./js/myApp.js"></script>
-    <script src="./js/myCtrl.js"></script>
+    
 </body>
 </html>
 
-<!--Modules define Angular S applications--->
-<!--Controllers control AngularJS applications --->
-<!--ng-app directives defines the application--->
-<!--ng-controller directive defines the controller--->
