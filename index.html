@@ -9,15 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
+    <w3-test-directive></w3-test-directive>
     
-        <div ng-app="" ng-init="names=['Jani', 'Hege', 'Kai']">
-            <ul>
-                <li ng-repeat="x in names">
-                    {{ x }}
-                </li>
-            </ul>
-        </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive("w3TestDirective", function (){
+            return {
+                template: "<h1>Made by a directive!</h1>"
+            }
+        });
+    </script>   
 
     
 </body>
